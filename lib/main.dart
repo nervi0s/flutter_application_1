@@ -2,23 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(new MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return new MaterialApp(
       title: "Titulo 😃",
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Titulo barra"),
+      home: new Scaffold(
+        appBar: new AppBar(
+          title: new Text("Titulo barra"),
           actions: <Widget>[
-            IconButton(icon: Icon(Icons.arrow_downward), onPressed: pop),
+            new IconButton(
+                icon: new Icon(Icons.arrow_downward), onPressed: pop),
           ],
+          backgroundColor: new Color.fromARGB(255, 255, 0, 100),
         ),
-        body: Center(
-          child: Text(WordPair.random().asCamelCase),
+        body: new Center(
+          child: new Text(new WordPair.random().asCamelCase),
         ),
       ),
       debugShowCheckedModeBanner: false,
@@ -26,6 +28,6 @@ class MyApp extends StatelessWidget {
   }
 
   void pop() {
-    print("holaa");
+    print("hola consola");
   }
 }
