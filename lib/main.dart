@@ -8,6 +8,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final WordPair wordPair = new WordPair.random();
     return new MaterialApp(
       title: "Titulo 😃",
       home: new Scaffold(
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: new Color.fromARGB(255, 255, 0, 100),
         ),
         body: new Center(
-          child: new Text(new WordPair.random().asCamelCase),
+          child: new Text(wordPair.asCamelCase),
         ),
       ),
       debugShowCheckedModeBanner: false,
