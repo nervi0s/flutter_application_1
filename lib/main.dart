@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: new Color.fromARGB(255, 255, 0, 100),
         ),
         body: new Center(
-          child: RandomWords(), //child: mensaje,
+          child: new RandomWords(), //child: mensaje,
         ),
       ),
       debugShowCheckedModeBanner: false,
@@ -67,7 +67,8 @@ class _RandomWordsState extends State<RandomWords> {
       if (i >= _combinaciones.length) {
         _combinaciones.add(WordPair.random());
       }
-      print(_combinaciones.length);
+      print(
+          '${_combinaciones.length} <- tamaño de la lista -- ${_combinaciones[i ~/ 2]} <- retornado');
       return _construirUnaFila(_combinaciones[i ~/ 2]);
     }
   }
